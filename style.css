@@ -557,3 +557,36 @@ body {
     grid-column: span 1;
   }
 }
+
+
+.bento-about-card {
+  grid-column: span 2;
+  background: #f4dfe9;
+  color: var(--text-dark);
+}
+
+.bento-about-card:hover {
+  color: var(--text-dark);
+}
+
+.bento-about-card h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  font-style: italic;
+}
+
+.bento-about-card > i {
+  color: var(--mauve-dark);
+}
+
+@media (max-width: 768px) {
+  .bento-about-card {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 380px) {
+  .bento-about-card {
+    grid-column: span 1;
+  }
+}

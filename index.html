@@ -4,78 +4,11 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Chei Leanne Capacia — Portfolio</title>
-
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-
-  <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
-
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"/>
-
   <link rel="stylesheet" href="style.css"/>
 </head>
-
 <body>
-
-<!-- BENTO GRID DESIGN -->
-<section class="container-fluid bento-wrapper">
-  <div class="bento-grid">
-
-    <div class="bento-card bento-intro-card">
-      <span class="bento-small-label">WELCOME TO MY PORTFOLIO</span>
-      <h1>Chei Leanne<br>Capacia<span>.</span></h1>
-      <p>A little space filled with my interests, hobbies, and favorite moments.</p>
-      <a href="#about-me" class="bento-button">
-        Explore my world <i class="bi bi-arrow-up-right"></i>
-      </a>
-      <div class="bento-watermark">CLC</div>
-    </div>
-
-    <a href="https://www.instagram.com/yzcziii/" class="bento-card bento-instagram" target="_blank" rel="noopener noreferrer">
-      <i class="bi bi-instagram"></i>
-      <span>INSTAGRAM</span>
-      <small>Follow my moments ↗</small>
-    </a>
-
-    <a href="https://www.facebook.com/chei.leanne.capacia/" class="bento-card bento-facebook" target="_blank" rel="noopener noreferrer">
-      <i class="bi bi-facebook"></i>
-      <span>FACEBOOK</span>
-      <small>Let's connect ↗</small>
-    </a>
-
-    <a href="#hobbies" class="bento-card bento-games">
-      <i class="bi bi-controller"></i>
-      <h2>Gaming</h2>
-      <span>MY HOBBIES / 01</span>
-    </a>
-
-    <a href="#hobbies" class="bento-card bento-music">
-      <i class="bi bi-music-note-beamed"></i>
-      <h2>Music</h2>
-      <span>MY HOBBIES / 02</span>
-    </a>
-
-    <a href="#gallery" class="bento-card bento-moments">
-      <i class="bi bi-camera"></i>
-      <h2>Little Moments</h2>
-      <span>MY PHOTO DIARY</span>
-    </a>
-
-    <a href="#find-me" class="bento-card bento-contact">
-      <div>
-        <span class="bento-small-label">LET'S CONNECT</span>
-        <h2>Find me<br>around here.</h2>
-      </div>
-      <i class="bi bi-chat-heart-fill bento-chat-icon"></i>
-      <span class="bento-contact-link">CONTACT ME <i class="bi bi-arrow-up-right"></i></span>
-    </a>
-
-  </div>
-</section>
-<!-- END BENTO GRID -->
-
 
 <!-- ── HEADER ── -->
 <header class="site-header">
@@ -93,9 +26,8 @@
   </div>
 </header>
 
-
 <!-- ── ABOUT ME ── -->
-<div class="sec-bar reveal" id="about-me">About Me</div>
+<div class="sec-bar reveal">About Me</div>
 <div class="sec-content reveal">
   <div class="about-layout">
     <div class="about-text">
@@ -110,9 +42,8 @@
   </div>
 </div>
 
-
 <!-- ── HOBBIES ── -->
-<div class="sec-bar reveal" id="hobbies">My Hobbies</div>
+<div class="sec-bar reveal">My Hobbies</div>
 <div class="sec-content reveal" style="padding: 0;">
   <div class="hobby-grid">
     <div class="hobby-item">
@@ -147,7 +78,6 @@
     </div>
   </div>
 </div>
-
 
 <!-- ── THINGS I LIKE ── -->
 <div class="sec-bar reveal">Things I Like</div>
@@ -187,9 +117,8 @@
   </div>
 </div>
 
-
 <!-- ── GALLERY ── -->
-<div class="sec-bar reveal" id="gallery">Life Recently</div>
+<div class="sec-bar reveal">Life Recently</div>
 <div class="sec-content reveal" style="padding: 2.5rem 3rem;">
   <div class="gallery-grid">
     <div class="gallery-cell"><img src="life1.jpg" alt="Life photo 1"></div>
@@ -201,9 +130,8 @@
   </div>
 </div>
 
-
 <!-- ── FIND ME ── -->
-<div class="sec-bar reveal" id="find-me">Find Me</div>
+<div class="sec-bar reveal">Find Me</div>
 <div class="sec-content reveal">
   <div class="findme-layout">
     <div class="ci-item">
@@ -232,26 +160,14 @@
   </div>
 </div>
 
-
-<!-- ORIGINAL REVEAL SCRIPT -->
 <script>
   const revEls = document.querySelectorAll('.reveal');
-
-  if ('IntersectionObserver' in window) {
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          obs.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.07 });
-
-    revEls.forEach(el => obs.observe(el));
-  } else {
-    revEls.forEach(el => el.classList.add('visible'));
-  }
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.07 });
+  revEls.forEach(el => obs.observe(el));
 </script>
-
 </body>
 </html>

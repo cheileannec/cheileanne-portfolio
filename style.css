@@ -472,26 +472,56 @@ body {
   pointer-events: none;
 }
 
-.bento-instagram {
-  background: #f1dce9;
+```css
+/* ── BENTO CARD COLORS ── */
+.bento-currently {
+  background: #F1DCE9;
 }
 
-.bento-facebook {
-  background: #e8d7e8;
+.bento-currently > i {
+  color: var(--mauve-dark);
 }
 
-.bento-games {
-  background: #e5d2df;
+.bento-progress {
+  background: #E8D7E8;
 }
 
-.bento-music {
-  background: #f5e4ed;
+.bento-progress > i {
+  color: var(--mauve-dark);
 }
 
-.bento-moments {
-  background: #dfc7d9;
+.bento-goals {
+  background: #E5D2DF;
 }
 
+.bento-goals > i {
+  color: var(--mauve-dark);
+}
+
+.bento-motto {
+  background: #F5E4ED;
+}
+
+.bento-motto > i {
+  color: var(--mauve-dark);
+}
+
+/* ── MY DREAMS CARD ── */
+.bento-dream {
+  background: #E5D2DF;
+  color: var(--text-dark);
+}
+
+.bento-dream > i {
+  color: var(--mauve-dark);
+}
+
+.bento-dream h2 {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+}
+
+/* ── CONTACT CARD ── */
 .bento-contact {
   grid-column: span 2;
   background: var(--mauve);
@@ -512,6 +542,29 @@ body {
 .bento-contact-link {
   margin-top: 0.75rem;
   font-weight: 700;
+}
+
+/* ── LITTLE REMINDER / QUOTE CARD ── */
+.bento-quote {
+  background: #F4DFE9;
+  color: var(--text-dark);
+}
+
+.bento-quote > i {
+  color: var(--mauve-dark);
+  font-size: 2rem;
+}
+
+.bento-quote h2 {
+  font-size: clamp(1.2rem, 2vw, 1.7rem);
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+}
+
+.bento-dream small,
+.bento-quote small {
+  line-height: 1.6;
+  letter-spacing: 0.02em;
 }
 
 /* ── BENTO RESPONSIVE ── */
@@ -557,36 +610,4 @@ body {
     grid-column: span 1;
   }
 }
-
-
-.bento-about-card {
-  grid-column: span 2;
-  background: #f4dfe9;
-  color: var(--text-dark);
-}
-
-.bento-about-card:hover {
-  color: var(--text-dark);
-}
-
-.bento-about-card h2 {
-  font-family: 'DM Serif Display', serif;
-  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
-  font-style: italic;
-}
-
-.bento-about-card > i {
-  color: var(--mauve-dark);
-}
-
-@media (max-width: 768px) {
-  .bento-about-card {
-    grid-column: span 2;
-  }
-}
-
-@media (max-width: 380px) {
-  .bento-about-card {
-    grid-column: span 1;
-  }
-}
+```

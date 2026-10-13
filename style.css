@@ -508,6 +508,23 @@ body {
   font-style: italic;
 }
 
+
+/* GOOD FOOD CARD */
+.bento-goodfood {
+  grid-column: span 2;
+  background: #F1DCE9;
+}
+
+.bento-goodfood h2 {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+}
+
+.bento-goodfood small {
+  max-width: 380px;
+}
+
+
 /* CONTACT CARD */
 .bento-contact {
   grid-column: span 2;
@@ -544,7 +561,10 @@ body {
   font-style: italic;
 }
 
-/* ── TABLET ── */
+
+
+
+
 @media (min-width: 769px) {
   .bento-intro-card {
     grid-column: 1 / 3;
@@ -567,17 +587,22 @@ body {
     grid-column: 4;
   }
 
-  .bento-dream {
-    grid-column: 1 / 3;
-  }
+.bento-dream {
+  grid-column: 1 / 3;
+}
 
-  .bento-contact {
-    grid-column: 3 / 5;
-  }
+.bento-goodfood {
+  grid-column: 3 / 5;
+}
 
-  .bento-quote {
-    grid-column: 1 / 5;
-  }
+.bento-quote {
+  grid-column: 1 / 3;
+}
+
+.bento-contact {
+  grid-column: 3 / 5;
+}
+
 }
 
 /* ── MOBILE ── */
@@ -612,10 +637,11 @@ body {
   }
 
   .bento-dream,
-  .bento-contact,
-  .bento-quote {
-    grid-column: 1 / -1;
-  }
+.bento-goodfood,
+.bento-quote,
+.bento-contact {
+  grid-column: 1 / -1;
+}
 
   .bento-intro-card h1 {
     font-size: clamp(2.5rem, 10vw, 4rem);

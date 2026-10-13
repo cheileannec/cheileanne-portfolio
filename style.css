@@ -357,7 +357,8 @@ body {
 .bento-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-template-rows: repeat(2, minmax(180px, auto));
+  grid-template-rows: repeat(2, minmax(190px, auto));
+  grid-auto-rows: minmax(160px, auto);
   gap: 14px;
   max-width: 1400px;
   margin: 0 auto;
@@ -610,4 +611,104 @@ body {
     grid-column: span 1;
   }
 }
-```
+
+
+
+
+
+```css
+/* BENTO GRID PLACEMENT */
+.bento-intro-card {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.bento-currently {
+  grid-column: span 1;
+}
+
+.bento-progress {
+  grid-column: span 1;
+}
+
+.bento-goals {
+  grid-column: span 1;
+}
+
+.bento-motto {
+  grid-column: span 1;
+}
+
+.bento-dream {
+  grid-column: span 2;
+}
+
+.bento-contact {
+  grid-column: span 2;
+}
+
+.bento-quote {
+  grid-column: span 2;
+}
+
+/* Make the cards feel more personal */
+.bento-card {
+  min-height: 180px;
+  border-radius: 18px;
+  padding: 1.5rem;
+}
+
+.bento-intro-card {
+  min-height: 390px;
+}
+
+.bento-card small {
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+}
+
+/* TABLET AND MOBILE */
+@media (max-width: 768px) {
+  .bento-wrapper {
+    padding: 1.25rem 1rem;
+  }
+
+  .bento-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
+    grid-auto-rows: minmax(155px, auto);
+    gap: 10px;
+  }
+
+  .bento-intro-card {
+    grid-column: span 2;
+    grid-row: auto;
+    min-height: 300px;
+  }
+
+  .bento-dream,
+  .bento-contact,
+  .bento-quote {
+    grid-column: span 2;
+  }
+
+  .bento-card {
+    padding: 1rem;
+    min-height: 155px;
+    border-radius: 14px;
+  }
+}
+
+@media (max-width: 380px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bento-intro-card,
+  .bento-dream,
+  .bento-contact,
+  .bento-quote {
+    grid-column: span 1;
+  }
+}
+

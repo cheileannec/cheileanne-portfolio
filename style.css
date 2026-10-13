@@ -386,10 +386,6 @@ body {
   color: var(--text-dark);
 }
 
-.bento-card > i {
-  font-size: 2rem;
-  margin-bottom: 0.4rem;
-}
 
 .bento-card h2 {
   font-family: 'DM Serif Display', serif;

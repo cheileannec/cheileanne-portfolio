@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Projects — Chei Leanne Capacia</title>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"/>
+
   <style>
     :root {
       --cream: #f6f8fa;
@@ -15,17 +17,32 @@
       --amber: #a9d3f0;
       --page: #e3e8ed;
     }
-    * { box-sizing: border-box; }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: "DM Sans", system-ui, sans-serif;
       background: var(--page);
       color: var(--green);
     }
-    .wrap { max-width: 1100px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
 
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
 
-    .topbar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
     .back-btn {
       display: inline-block;
       padding: 0.6rem 1.2rem;
@@ -37,14 +54,18 @@
       font-weight: 500;
       transition: background 0.2s;
     }
-    .back-btn:hover { background: var(--red); color: var(--cream); }
+
+    .back-btn:hover {
+      background: var(--red);
+      color: var(--cream);
+    }
+
     .count {
       font-size: 0.7rem;
       letter-spacing: 0.14em;
       text-transform: uppercase;
       opacity: 0.7;
     }
-
 
     .hero {
       margin: 1.5rem 0 1.25rem;
@@ -54,6 +75,7 @@
       position: relative;
       overflow: hidden;
     }
+
     .hero .label {
       font-size: 0.68rem;
       font-weight: 500;
@@ -61,6 +83,7 @@
       text-transform: uppercase;
       opacity: 0.75;
     }
+
     .hero h1 {
       font-family: "Anton", sans-serif;
       font-weight: 400;
@@ -69,14 +92,26 @@
       line-height: 0.9;
       margin: 0.6rem 0 1rem;
     }
-    .hero h1 span { color: var(--red); }
-    .hero p { margin: 0; max-width: 420px; font-size: 1rem; line-height: 1.55; opacity: 0.85; }
+
+    .hero h1 span {
+      color: var(--red);
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 420px;
+      font-size: 1rem;
+      line-height: 1.55;
+      opacity: 0.85;
+    }
+
     .hero .badge-round {
       position: absolute;
       right: 2rem;
       top: 50%;
       transform: translateY(-50%) rotate(-8deg);
-      width: 130px; height: 130px;
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
       background: var(--amber);
       color: var(--ink);
@@ -88,11 +123,24 @@
       font-size: 1.15rem;
       line-height: 1.1;
     }
-    @media (max-width: 640px) { .hero .badge-round { display: none; } }
 
+    @media (max-width: 640px) {
+      .hero .badge-round {
+        display: none;
+      }
+    }
 
-    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
-    @media (max-width: 767.98px) { .grid { grid-template-columns: 1fr; } }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+    }
+
+    @media (max-width: 767.98px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
 
     .project {
       display: flex;
@@ -101,18 +149,51 @@
       overflow: hidden;
       text-decoration: none;
       color: inherit;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
     }
-    .project:hover { transform: translateY(-6px); box-shadow: 0 18px 36px rgba(18, 32, 31, 0.18); }
-    .project.green { background: var(--green); color: var(--cream); }
-    .project.amber { background: var(--amber); color: var(--ink); }
 
-    .cover { position: relative; aspect-ratio: 16 / 10; overflow: hidden; margin: 0.75rem 0.75rem 0; border-radius: 20px; background: var(--ink); }
-    .cover img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
-    .project:hover .cover img { transform: scale(1.05); }
+    .project:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 36px rgba(18, 32, 31, 0.18);
+    }
+
+    .project.green {
+      background: var(--green);
+      color: var(--cream);
+    }
+
+    .project.amber {
+      background: var(--amber);
+      color: var(--ink);
+    }
+
+    .cover {
+      position: relative;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      margin: 0.75rem 0.75rem 0;
+      border-radius: 20px;
+      background: var(--ink);
+    }
+
+    .cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .project:hover .cover img {
+      transform: scale(1.05);
+    }
+
     .num {
       position: absolute;
-      left: 0.9rem; top: 0.7rem;
+      left: 0.9rem;
+      top: 0.7rem;
       font-family: "Anton", sans-serif;
       font-size: 2.6rem;
       line-height: 1;
@@ -120,8 +201,20 @@
       text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
     }
 
-    .info { padding: 1.4rem 1.6rem 1.7rem; display: flex; flex-direction: column; gap: 0.9rem; flex: 1; }
-    .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .info {
+      padding: 1.4rem 1.6rem 1.7rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+      flex: 1;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
     .tag {
       font-size: 0.68rem;
       font-weight: 500;
@@ -132,6 +225,7 @@
       border: 1px solid currentColor;
       opacity: 0.8;
     }
+
     .info h2 {
       font-family: "Anton", sans-serif;
       font-weight: 400;
@@ -140,8 +234,18 @@
       line-height: 1;
       margin: 0;
     }
-    .project.green h2 { color: var(--amber); }
-    .info p { margin: 0; font-size: 0.92rem; line-height: 1.55; opacity: 0.85; flex: 1; }
+
+    .project.green h2 {
+      color: var(--amber);
+    }
+
+    .info p {
+      margin: 0;
+      font-size: 0.92rem;
+      line-height: 1.55;
+      opacity: 0.85;
+      flex: 1;
+    }
 
     .go {
       display: inline-flex;
@@ -150,17 +254,22 @@
       font-weight: 500;
       font-size: 0.9rem;
     }
+
     .go i {
-      display: grid; place-items: center;
-      width: 38px; height: 38px;
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
       border-radius: 50%;
       font-style: normal;
       background: var(--red);
       color: var(--cream);
       transition: transform 0.25s ease;
     }
-    .project:hover .go i { transform: translateX(6px); }
 
+    .project:hover .go i {
+      transform: translateX(6px);
+    }
 
     .strip {
       margin-top: 1.25rem;
@@ -175,59 +284,148 @@
     }
   </style>
 </head>
+
 <body>
+
   <div class="wrap">
 
+
     <div class="topbar">
-      <a href="index.html" class="back-btn">← Back to Portfolio</a>
-      <span class="count">2 projects</span>
+      <a href="index.html" class="back-btn">
+        ← Back to Portfolio
+      </a>
+
+      <span class="count">
+        3 projects
+      </span>
     </div>
 
+
+
     <section class="hero">
-      <span class="label">Web Development</span>
-      <h1>My<br>Projects<span></span></h1>
+
+      <span class="label">
+        Web Development
+      </span>
+
+      <h1>
+        My<br>Projects<span></span>
+      </h1>
+
     </section>
+
+
 
     <div class="grid">
 
 
-      <a href="https://cheileannec.github.io/Web-Development/Activity%201/index.html" class="project green">
+
+      <a
+        href="https://cheileannec.github.io/Web-Development/Activity%201/index.html"
+        class="project green"
+      >
+
         <div class="cover">
           <img src="bento.jpg" alt="Activity 1">
           <span class="num">01</span>
         </div>
+
         <div class="info">
+
           <div class="tags">
             <span class="tag">Web Development</span>
             <span class="tag">HTML</span>
             <span class="tag">CSS</span>
             <span class="tag">Responsive</span>
           </div>
-          <h2>Activity 1</h2>
-          <span class="go">View Project <i>→</i></span>
+
+          <h2>
+            Activity 1
+          </h2>
+
+          <span class="go">
+            View Project
+            <i>→</i>
+          </span>
+
         </div>
+
       </a>
 
-  
-      <a href="https://cheileannec.github.io/Web-Development/Activity%202/index.html" class="project amber">
+
+
+      <a
+        href="https://cheileannec.github.io/Web-Development/Activity%202/index.html"
+        class="project amber"
+      >
+
         <div class="cover">
           <img src="json.jpg" alt="Activity 2">
           <span class="num">02</span>
         </div>
+
         <div class="info">
+
           <div class="tags">
             <span class="tag">Web Development</span>
             <span class="tag">JavaScript</span>
             <span class="tag">JSON</span>
             <span class="tag">Responsive</span>
           </div>
-          <h2>Activity 2</h2>
-          <span class="go">View Project <i>→</i></span>
+
+          <h2>
+            Activity 2
+          </h2>
+
+          <span class="go">
+            View Project
+            <i>→</i>
+          </span>
+
         </div>
+
       </a>
+
+
+
+      <a
+        href="https://cheileannec.github.io/Web-Development/Activity%203/index.html"
+        class="project green"
+      >
+
+        <div class="cover">
+          <img src="api.png" alt="Activity 3">
+          <span class="num">03</span>
+        </div>
+
+        <div class="info">
+
+          <div class="tags">
+            <span class="tag">Web Development</span>
+            <span class="tag">API</span>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+
+          <h2>
+            Activity 3
+          </h2>
+
+          <span class="go">
+            View Project
+            <i>→</i>
+          </span>
+
+        </div>
+
+      </a>
+
 
     </div>
 
   </div>
+
 </body>
 </html>
+```
